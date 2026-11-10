@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!-- Redaktionellt underlag: tio relevanta webbplatser i ett offentligt sökindex. Googles förstasidesplaceringar kunde inte verifieras. -->
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#ece9f4">
+  <title>PantherBuy spreadsheet – svensk guide till länkar och QC</title>
+  <meta name="description" content="Använd PantherBuy spreadsheet för att hitta skor, kläder och accessoarer. Jämför produktlänkar, mått, QC-bilder och frakt till Sverige.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:title" content="PantherBuy spreadsheet – svensk guide till länkar och QC">
+  <meta property="og:description" content="Hitta rätt kategori och jämför mått, produktlänkar, QC-bilder och frakt till Sverige.">
+  <link rel="preconnect" href="https://blogbuzzter.de">
+  <style>
+    :root{color-scheme:light;--paper:#f6f4f9;--ink:#201b33;--muted:#514964;--line:#cdc5dc;--lilac:#ece9f4;--accent:#402473;--lime:#dcf28a;--width:72rem}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    a{color:inherit;text-underline-offset:.2em}
+    a:focus-visible{outline:3px solid #7242bd;outline-offset:3px}
+    h1,h2,h3,p,figure,dl,dd{margin:0}
+    h1,h2,h3{line-height:1.13;overflow-wrap:anywhere}
+    h2{font-size:clamp(1.6rem,3.4vw,2.4rem);letter-spacing:-.035em}
+    h3{font-size:1.23rem}
+    p{max-width:68ch}
+    p+p{margin-top:.7rem}
+    img{display:block;width:100%;height:auto}
+    .wrap{width:min(calc(100% - 2rem),var(--width));margin-inline:auto}
+    .mast{background:var(--lilac);border-bottom:1px solid var(--line)}
+    .mast .wrap,.foot .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding-block:.8rem}
+    .brand{font-weight:800;overflow-wrap:anywhere}
+    .eyebrow{color:var(--muted);font-size:.78rem;font-weight:750;letter-spacing:.09em;text-transform:uppercase}
+    .intro{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(1.25rem,4vw,3.5rem);align-items:center;padding-block:clamp(1.5rem,5vw,4rem) 1.6rem}
+    h1{font-size:clamp(2.3rem,6vw,5rem);letter-spacing:-.055em;margin:.35rem 0 .8rem}
+    .lead{font-size:clamp(1rem,2vw,1.16rem)}
+    .button{display:inline-block;margin-top:1.15rem;padding:.68rem .95rem;background:var(--lime);border:1px solid var(--ink);border-radius:.35rem;font-weight:750}
+    .feature{background:#fff;border:1px solid var(--line);border-radius:.6rem;overflow:hidden}
+    .feature img{aspect-ratio:3/2;object-fit:contain;background:#eeeaf5}
+    figcaption{padding:.55rem .7rem;color:var(--muted);font-size:.85rem}
+    .section{padding-block:1.5rem 2.4rem}
+    .section>p{margin-top:.55rem}
+    .categories{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;margin:1rem 0 0;padding:0}
+    .categories a{display:flex;align-items:center;justify-content:space-between;gap:.55rem;min-height:3.25rem;padding:.55rem .65rem;background:#fff;border:1px solid var(--line);border-radius:.35rem;text-decoration:none;font-weight:700}
+    .categories a:hover,.button:hover{background:var(--lilac);text-decoration:underline}
+    .categories small{display:block;color:var(--muted);font-size:.72rem;font-weight:500;overflow-wrap:anywhere}
+    .categories [aria-hidden]{color:var(--accent)}
+    .band{background:var(--lilac);border-block:1px solid var(--line)}
+    .band .section{padding-block:2rem}
+    .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;margin-top:1rem}
+    .gallery figure{background:#fff;border:1px solid var(--line);border-radius:.4rem;overflow:hidden}
+    .gallery img{aspect-ratio:1;object-fit:contain;background:#f2eff6}
+    .articles{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.1rem}
+    article{background:#fff;border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:.4rem;padding:1.05rem}
+    article h3{margin:.25rem 0 .7rem}
+    article ul{margin:.7rem 0 0;padding-inline-start:1.25rem}
+    article li+li{margin-top:.36rem}
+    .checklist{margin-top:1rem;padding:.85rem 1rem;border:1px solid var(--line);border-radius:.4rem;background:var(--lilac)}
+    .faq{margin-top:.95rem;max-width:48rem}
+    .faq>div{border-top:1px solid var(--line);padding:.7rem 0}
+    .faq dt{font-weight:780}
+    .faq dd{margin-top:.25rem}
+    .foot{border-top:1px solid var(--line);background:var(--lilac)}
+    @media(min-width:55rem){.categories{grid-template-columns:repeat(5,minmax(0,1fr))}}
+    @media(max-width:44rem){.intro,.articles{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "sv",
+    "name": "PantherBuy spreadsheet – svensk guide till länkar och QC",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vad är ett PantherBuy spreadsheet?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Det är en samling produktreferenser och länkar som du kan använda för att hitta och jämföra varor före ett köp."}
+      },
+      {
+        "@type": "Question",
+        "name": "Vart leder kategorilänkarna?",
+        "acceptedAnswer": {"@type": "Answer", "text": "De leder till respektive kategori hos HipobuyFind. Kontrollera modell, variant och lagerstatus i den aktuella annonsen."}
+      },
+      {
+        "@type": "Question",
+        "name": "Vad kan jag kontrollera på en QC-bild?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Jämför synliga detaljer som färg, sömmar, märkning och eventuella skador. Äkthet, passform och hållbarhet kräver annan dokumentation eller bedömning."}
+      },
+      {
+        "@type": "Question",
+        "name": "Hur jämför jag frakt till Sverige?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Be om paketets mått och debiterbara vikt. Jämför fraktalternativ för samma paket och räkna om hela kostnaden till svenska kronor, inklusive eventuella avgifter."}
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/tquna/">
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap">
+      <a class="brand" href="https://www.hipobuyfind.com">www.hipobuyfind.com</a>
+      <span class="eyebrow">Svensk köpguide</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="intro" aria-labelledby="sidrubrik">
+        <div>
+          <p class="eyebrow">Hitta en vara · Granska detaljerna</p>
+          <h1 id="sidrubrik">PantherBuy spreadsheet</h1>
+          <p class="lead">Ett PantherBuy spreadsheet samlar produktreferenser så att du kan jämföra skor, kläder och accessoarer. Börja med en kategori och följ sedan produktlänken för att dubbelkolla modell, mått och leveransvillkor.</p>
+          <a class="button" href="https://www.hipobuyfind.com">Öppna produktkatalogen <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="feature">
+          <img src="https://blogbuzzter.de/media/2023/03/Nike-Air-Max-1-OG-DQ3989-100-Big-Bubble-3.jpg" width="900" height="600" alt="Nike Air Max 1 ’86 i vitt, grått och rött" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>Stilreferens · Nike Air Max 1 ’86</figcaption>
+        </figure>
+      </section>
+
+      <nav class="section" aria-labelledby="kategorier">
+        <h2 id="kategorier">Välj kategori hos HipobuyFind</h2>
+        <ul class="categories">
+          <li><a href="https://hipobuyfind.com/category-911-Shoes.html"><span>Skor<small lang="en">Shoes</small></span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html"><span>Huvtröjor och tröjor<small lang="en">Hoodies/Sweaters</small></span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html"><span>T-tröjor<small lang="en">T-Shirts</small></span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-914-Jackets.html"><span>Jackor<small lang="en">Jackets</small></span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html"><span>Byxor och shorts<small lang="en">Pants/Shorts</small></span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-916-Headwear.html"><span>Huvudbonader<small lang="en">Headwear</small></span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-917-Sets.html"><span>Klädset<small lang="en">Sets</small></span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html"><span>Underkläder<small lang="en">Underwear/underpants</small></span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-919-Jersey.html"><span>Matchtröjor<small lang="en">Jersey</small></span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-920-Accessories.html"><span>Accessoarer<small lang="en">Accessories</small></span><span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="band" aria-labelledby="stilreferenser">
+      <div class="wrap section">
+        <h2 id="stilreferenser">Fyra detaljer att titta närmare på</h2>
+        <p>Bilderna är stilreferenser. Kontrollera sortimentet hos säljaren och använd foton av den faktiska varan när du bedömer ett exemplar.</p>
+        <div class="gallery">
+          <figure>
+            <img src="https://nz.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-workwear-lv-denim-jacket--HTA50WPCP65L_PM2_Front%20view.jpg" width="480" height="480" alt="Ljusblå jeansjacka från Louis Vuitton sedd framifrån" loading="lazy" decoding="async">
+            <figcaption>Louis Vuitton · Fickornas placering</figcaption>
+          </figure>
+          <figure>
+            <img src="https://cdn.theluxurycloset.com/uploads/opt/products/750x750/luxury-women-gucci-used-accessories-p1150835-001.jpg" width="750" height="750" alt="Beige Gucci-keps med GG-mönster och böjd skärm" loading="lazy" decoding="async">
+            <figcaption>Gucci · Skärmens form</figcaption>
+          </figure>
+          <figure>
+            <img src="https://assets.hermes.com/is/image/hermesproduct/bracelet-clic-h--700001F%204P-front-1-300-0-1000-1000_b.jpg" width="1000" height="1000" alt="Hermès Clic H-armband med emalj och H-format spänne" loading="lazy" decoding="async">
+            <figcaption>Hermès · Spännets konstruktion</figcaption>
+          </figure>
+          <figure>
+            <img src="https://shop.r10s.jp/w-import/cabinet/dior-01/dior-062_4.jpg" width="480" height="480" alt="Dior Petit CD-halsband med ett CD-hänge på tunn kedja" loading="lazy" decoding="async">
+            <figcaption>Dior · Hängets storlek</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" aria-labelledby="guider">
+      <h2 id="guider">Fyra guider från första länken till leverans</h2>
+      <div class="articles">
+        <article>
+          <p class="eyebrow">01 / Sökning</p>
+          <h3>PantherBuy produktlänkar och säljarannonser</h3>
+          <p>Öppna den ursprungliga produktlänken och jämför artikelnummer, färgvariant och storleksval med uppgifterna i kalkylarket. På Weidian, Taobao och 1688 kan samma annons samla flera versioner av en vara.</p>
+          <p>Spara säljarens länk och datumet då du kontrollerade lagerstatus. Om länken har gått ut kan du söka efter modellnumret och jämföra de nya annonsernas variantbilder.</p>
+        </article>
+        <article>
+          <p class="eyebrow">02 / Passform</p>
+          <h3>PantherBuy storleksguide för skor och kläder</h3>
+          <p>För sneakers, jämför fotlängd i centimeter med säljarens storlekstabell. Om tabellen anger innersulans längd, jämför den med innersulan i en sko som redan passar.</p>
+          <p>Mät en huvtröja plant över bröstet och från axeln till nederkanten. Kontrollera axelbredd och ärmlängd för jackor, midjevidd och innerbenslängd för byxor samt huvudomkrets för kepsar. För matchtröjor kan bröstvidden skilja mellan supporter- och spelarversioner.</p>
+        </article>
+        <article>
+          <p class="eyebrow">03 / Bildkontroll</p>
+          <h3>PantherBuy QC-bilder före frakt</h3>
+          <p>QC står för kvalitetskontroll. Kontrollera att bilderna gäller ditt exemplar och att storleksetiketten stämmer med din beställning. Be om en ny vinkel om en viktig detalj saknas.</p>
+          <ul>
+            <li><strong>Skor.</strong> Jämför sulprofil, hälform och synliga limrester på båda skorna.</li>
+            <li><strong>Kläder.</strong> Titta på sömmar, dragkedja, tryckplacering och måttband på bild.</li>
+            <li><strong>Smycken.</strong> Be om närbilder på lås och kedjelänkar samt uppgift om kedjans längd.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="eyebrow">04 / Leverans</p>
+          <h3>PantherBuy frakt till Sverige</h3>
+          <p>Jämför den totala kostnaden i SEK. Utgå från varans pris och lägg ihop inrikes frakt, eventuell agentavgift och internationell frakt. Kontrollera vilka import- och hanteringsavgifter som kan tillkomma för din försändelse.</p>
+          <p>Be om paketets vikt och yttermått. Jämför hur fraktalternativen räknar volymvikt och vad som gäller för spårning, eventuell samfrakt och retur innan du skickar paketet vidare.</p>
+        </article>
+      </div>
+      <p class="checklist"><strong>Innan du beställer.</strong> Anteckna säljarlänk, vald variant, mått i centimeter, datum för bildkontroll och total kostnad i SEK.</p>
+    </section>
+
+    <section class="wrap section" aria-labelledby="fragor">
+      <h2 id="fragor">Vanliga frågor</h2>
+      <dl class="faq">
+        <div>
+          <dt>Vad är ett PantherBuy spreadsheet?</dt>
+          <dd>Det är en samling produktreferenser och länkar som du kan använda för att hitta och jämföra varor före ett köp.</dd>
+        </div>
+        <div>
+          <dt>Vart leder kategorilänkarna?</dt>
+          <dd>De leder till respektive kategori hos HipobuyFind. Kontrollera modell, variant och lagerstatus i den aktuella annonsen.</dd>
+        </div>
+        <div>
+          <dt>Vad kan jag kontrollera på en QC-bild?</dt>
+          <dd>Jämför synliga detaljer som färg, sömmar, märkning och eventuella skador. Äkthet, passform och hållbarhet kräver annan dokumentation eller bedömning.</dd>
+        </div>
+        <div>
+          <dt>Hur jämför jag frakt till Sverige?</dt>
+          <dd>Be om paketets mått och debiterbara vikt. Jämför fraktalternativ för samma paket och räkna om hela kostnaden till svenska kronor, inklusive eventuella avgifter.</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>Fristående svensk guide om produktlänkar, storlekar och bildkontroll.</p>
+      <a class="brand" href="https://www.hipobuyfind.com">Besök HipobuyFind</a>
+    </div>
+  </footer>
+</body>
+</html>
